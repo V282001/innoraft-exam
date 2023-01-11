@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+        
+        header {
+            width: 100%;
+            height: 15%;
+            background-color: rgb(14, 134, 134);
+
+        }
+
+        .contact {
+            display: flex;
+            color: white;
+            /* background-color: blue; */
+            width: 25%;
+            height: 45%;
+            align-items: center;
+            gap: 10px;
+        }
+
+        li {
+            display: flex;
+            /* width: 20%; */
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav1 {
+            height: 45%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 20px;
+            color: white;
+        }
+        .nav1 ul {
+            width: 50%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .nav1 .btn {
+            border-radius: 100vw;
+            background-color: orangered;
+            height: 40px;
+            width: 17%;
+            padding: 0 10px;
+        }
+
+        .nav2 {
+            width: 100%;
+            height: 55%;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: black;
+            font-size: 20px;
+            padding-left: 10px;
+        }
+
+        .nav2 .logo {
+            width: 180px;
+        }
+
+        .nav2 ul {
+            width: 60%;
+            height: 100px;
+            display: flex;
+            justify-content: flex-start;
+            gap: 40px;
+            align-items: center;
+        }
+        .nav2 ul li img{
+            filter: invert();
+        }
+
+        .nav2 .search input::placeholder {
+            color: black;
+            font-size: 20px;
+        }
+
+        .nav2 .search {
+            border-radius: 100vw;
+            display: flex;
+            /* background-color: orangered; */
+            align-items: center;
+            justify-content: space-between;
+            height: 50px;
+            padding-right: 10px;
+            width: auto;
+            border: 1px solid black;
+            border-radius: 100vw;
+        }
+
+        .nav2 .search input {
+            background: none;
+            border: none;
+            padding-left: 10px;
+            height: 100%;
+            /* width:50%; */
+            border-radius: 100vw;
+
+        }
+
+        .nav2 .search img {
+            height: 50%;
+            width: 50%;
+            filter: invert();
+        }
+
+        
+
+        .contact .item {
+            display: flex;
+            width: 50%;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .container {
+            height: 70%;
+            width: 100%;
+            /* background-color: blue; */
+            background-image: url("Images/banner.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            color: white;
+        }
+
+        /* .container::before {
+            content: " ";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            
+            background-color: rgba(240, 0, 0, 0.973);
+        } */
+        .container .overlay {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.61);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+        }
+
+        .container h1 {
+            text-align: center;
+            font-size: 50px;
+            padding: 0 30%;
+
+        }
+
+        .container p {
+            text-align: center;
+        }
+
+
+        .content {
+            width: 100%;
+            height: 50%;
+            /* background-color: blueviolet; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .content button {
+            width: 25%;
+            height: 60px;
+            display: flex;
+            background-color: orangered;
+            justify-content: center;
+            gap: 20px;
+            align-items: center;
+            border: none;
+            border-radius: 100vw;
+        }
+
+        .content p {
+            font-size: 20px;
+            color: white;
+
+        }
+
+        .achiev {
+            display: flex;
+            height: 50%;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+
+        .social {
+            width: 5%;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pics {
+            width: 80%;
+            display: flex;
+            justify-content: flex-start;
+            padding-left: 8%;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .pics img {
+            width: 15%;
+            padding-right: 30px;
+        }
+
+        .years {
+            border-right: 2px solid white;
+        }
+
+        footer {
+            height: 15%;
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+            position: absolute;
+            bottom: 4%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.349);
+        }
+
+        .lists {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 40%;
+            padding: 0 5%;
+            width: 100%;
+        }
+
+        .lists p {
+            font-size: 20px;
+            color: orangered;
+
+        }
+
+        .list a {
+            color: rgb(14, 134, 134);
+        }
+
+        .menus {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 0 5%;
+        }
+
+        .dropmenu {
+            width: 70%;
+            
+        }
+
+        .search2 {
+            width: 30%;
+        }
+
+        .dropmenu ul {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+        }
+
+        .dropmenu ul li {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 3%;
+            width: 33.3%;
+            height: 50px;
+            border: 1px solid black;
+            border-radius: 100vw;
+        }
+
+        .dropmenu ul li img {
+            filter: invert();
+        }
+
+        footer .search2 input::placeholder {
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+        }
+
+        footer .search2 {
+            border-radius: 100vw;
+            display: flex;
+            background-color: orangered;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            padding-right: 10px;
+            /* width: 150px; */
+            width: 30%;
+            border-radius: 100vw;
+        }
+
+        footer .search2 input {
+            background: none;
+            border: none;
+            /* padding-left: 30px; */
+            height: 100%;
+            width: 40%;
+            border-radius: 100vw;
+
+        }
+
+        .nav2 .search img {
+            height: 50%;
+            width: 50%;
+            filter: invert();
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header here -->
+    <header>
+        <div class="nav1">
+            <div class="contact">
+                <div class="item">
+                    <img src="Icons/time.png"">
+                <p>24x7 Availability</p>
+             </div>
+             <div class=" item">
+                    <img src="Icons/call.png" alt="">
+                    <p>+91 (033) 78908765</p>
+                </div>
+            </div>
+            <ul>
+                <li>
+                    <p>About AMri</p>
+                    <img src="Icons/down-arrow.svg" alt="">
+                </li>
+                <li>
+                    <p>Carrer</p>
+                </li>
+                <li>
+                    <p>Blogs</p>
+                </li>
+                <li>
+                    <p>Academic $ Publications</p>
+                    <img src="Icons/down-arrow.svg" alt="">
+                </li>
+                <li class="btn">
+                    <p>I want to</p>
+                    <img src="Icons/down-arrow.svg" alt="">
+                </li>
+            </ul>
+        </div>
+        <div class="nav2">
+            <img class="logo" src="Images/logo.png" alt="">
+            <ul>
+                <li>
+                    <p>Locations</p>
+                    <img src="Icons/down-arrow.svg" alt="">
+                </li>
+                <li>
+                    <p>Specialities</p>
+                    <img src="Icons/down-arrow.svg" alt="">
+                </li>
+                <li>
+                    <p>Find a doctor</p>
+
+                </li>
+                <li>
+                    <p>sServices</p>
+                    <img src="Icons/down-arrow.svg" alt="">
+                </li>
+                <li>
+                    <p>International Patients</p>
+
+                </li>
+                <div class="search">
+                    <input type="text" placeholder="Search">
+                    <img src="Icons/search.svg" alt="">
+                </div>
+            </ul>
+        </div>
+    </header>
+    <!-- container here -->
+    <div class="container">
+        <div class="overlay">
+            <div class="content">
+                <h1>
+                    A Legecy of Excellence with a touch of care like nowhere
+                </h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, omnis!</p>
+                <button>
+                    <p>Book An Apponintment</p><img src="Icons/arrow.png" alt="">
+                </button>
+            </div>
+            <div class="achiev">
+                <div class="social">
+                    <img src="Icons/facebook.png" alt=""><img src="Icons/insta.png" alt=""><img src="Icons/twitter.png"
+                        alt=""><img src="Icons/linkedin.png" alt="">
+                </div>
+                <div class="pics">
+                    <img class="years" src="Images/25years.png" alt=""><img src="Images/best-brand.png" alt=""><img
+                        src="Images/top2-1.png" alt="">
+                    <img src="Images/top2-2.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer here -->
+    <footer>
+        <div class="lists">
+            <p>
+                Find a Doctor
+            </p>
+            <a href="#">View All Doctors</a>
+        </div>
+        <div class="menus">
+            <div class="dropmenu">
+                <ul>
+                    <li>
+                        <p>About AMri</p>
+                        <img src="Icons/down-arrow.svg" alt="">
+                    </li>
+                    <li>
+                        <p>About AMri</p>
+                        <img src="Icons/down-arrow.svg" alt="">
+                    </li>
+                    <li>
+                        <p>About AMri</p>
+                        <img src="Icons/down-arrow.svg" alt="">
+                    </li>
+                </ul>
+            </div>
+            <div class="search2">
+                <input type="text" placeholder="Search">
+                <img src="Icons/search.svg" alt="">
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
